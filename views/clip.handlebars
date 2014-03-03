@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Characterize It - {{title}}</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/pick.css" rel = "stylesheet">
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/sketch.js"></script>
+	<script src="js/pick.js"></script>
+	<script src="js/bootstrap.min.js"></script>      
+</head>
+
+<body>
+	<input type="hidden" id="movie_id" value="{{movie_id}}">
+
+	<div class="container">
+		<div class="detail">
+			<h1>Sasquatch</h1>
+		</div>
+
+		<div class="tools">
+		  <a href="#tools_sketch" data-tool="marker">Marker</a>
+		  <a href="#tools_sketch" data-tool="eraser">Eraser</a>
+		  <a href="#tools_sketch" data-download="png" style="float: right; width: 100px;">Download</a>
+		</div>
+		<canvas id="tools_sketch" width="800" height="600" style="background: url(/images/sas.png) no-repeat center center;"></canvas>
+
+		<script type="text/javascript">
+		  $(function() {
+		    $('#tools_sketch').sketch({defaultColor: "#000"});
+		  });
+		</script>
+
+
+		<div class="detail">
+			<h3>Rectangle</h3>
+			<h4>Inspired by art of Nate Wragg</h4>
+		</div>
+
+		<button class="btn btn-default get-started" id="6">Start over</button>
+		<button class="btn btn-default redirect-movie" id="7">Next!</button>
+	</div>
+</body>
+</html>
